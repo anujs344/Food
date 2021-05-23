@@ -65,6 +65,30 @@ a{
 .header a:hover::after{
     width: 100%;
 }
+/*baricon css*/
+
+#bar_icon{
+    color:white;
+    cursor: pointer;
+    display: none;
+}
+.sidebar{
+     z-index: 3;
+     background-color: black;
+     height:100px;
+}
+.sidebar ul{
+    display: flex;
+    padding:20px 0px;
+}
+.sidebar a{
+    display:block;
+    padding:20px;
+}
+.sidebar a:hover{
+    color:#ffd100;
+    border-bottom: 2px solid #ffd100;
+}
 /*css of front page content*/
 .home_section{
     height:690px;
@@ -149,23 +173,11 @@ background: linear-gradient(90deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.4) 150%);
 }
 .history-food span{
      color:white; 
-    font-size:2.4rem;
+    font-size:4rem;
     font-family: 'Playfair Display', serif;
-    animation-duration:0.4s;
+   letter-spacing:1.6px;
 }
 
-/*
-.head-history:hover{
-     color:#ffd100;
-    animation-name: move;
-    animation-timing-function: ease;
-}
-@keyframes move {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-100px); }
-  100% { transform: translateY(0); }
-}
-*/
 .history-content {
      width:100%;
      display:flex;
@@ -248,8 +260,8 @@ background: linear-gradient(90deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.4) 150%);
 .container-spices{
     position:relative; 
     width:100%;
-    height:600px;
-/*    top:50px;*/
+    height:500px;
+    top:20px;
     background: white;
     transition: background 2s;
 }
@@ -369,7 +381,8 @@ background: linear-gradient(90deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.4) 150%);
     top: 40%;
     display: block;
     border:13px solid black;
-    border-top: 13px solid #fdd100;
+    border-top:2px solid #fdd100;
+    border-bottom:2px solid #fdd100;
     width:80px;
     height:80px;
     border-radius:50%;
@@ -383,13 +396,27 @@ background: linear-gradient(90deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.4) 150%);
 
 /*css for responsive website*/
  
-@media screen and (max-width:500px){
-     .title-home{
+@media screen and (max-width:700px){
+    #loader{
+      left:40%;
+        height:60px;
+        width:60px;
+    } 
+    .title-home{
     text-align: center;
     position:absolute;
     left:0%;
     top:26%;
 }
+    .header-links{
+        display: none;
+    }
+    #bar_icon{
+    display:block;
+}
+    #cross{
+        display: none;
+    }
     .home-content{
         display: flex;
         flex-direction:column;
@@ -401,6 +428,9 @@ background: linear-gradient(90deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.4) 150%);
         display: flex;
         flex-direction: column;
     }
+    .history-food span{
+        font-size: 3rem;
+    }
     .history-content img{
     padding:20px;
     width:300px;
@@ -408,7 +438,7 @@ background: linear-gradient(90deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.4) 150%);
 }
     .content1 button{
     height:50px;
-    width:28%;
+    width:30%;
 }
     .content1{
         text-align: center;
@@ -420,7 +450,7 @@ background: linear-gradient(90deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.4) 150%);
     padding:40px 30px;
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .outer_div{
     margin-bottom:40px;
@@ -454,13 +484,11 @@ background: linear-gradient(90deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.4) 150%);
       padding:4px 10px;
 }   }
 @media screen and (max-width:370px){
-    body{
-        width:114%;
-    }
+  
      .title-home{
     text-align: center;
     position:absolute;
-    left:25%;
+    left:5%;
     top:35%;
 }
     .head-history{
@@ -482,8 +510,19 @@ background: linear-gradient(90deg, rgba(0,0,0,0) 25%, rgba(0,0,0,0.4) 150%);
     .content1{
         padding: 10px;
     }
+    .content1 button {
+    width: 30%;
+    }
 .content1 p{
     font-size: 1.2rem;
     line-height: 30px;
 }
+    .culture {
+    padding: 30px 10px;
+    margin-top:S20px;
+}
+    .con2 h1 {
+    font-size: 1.8rem;
+    }
+    
 }
