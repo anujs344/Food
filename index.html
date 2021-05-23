@@ -13,6 +13,7 @@
            <div id="loader" ></div>
         <section id="main" style="display: none">
             <div class=main-header>
+            
        <div class="header">
            <div><a href=""><i class="fas fa-utensils"></i></a></div>
                  <div class="header-links">
@@ -23,12 +24,27 @@
                      <li><a href="">Explore</a></li>
                      <li><a href="">About us</a></li>
                  </ul>
-                </div>   
+                </div> 
+                <div id="bar_icon">
+                <i class="fas fa-bars" id="open-bar"></i>
+                <i class="far fa-times-square" id="cross"></i>
+           </div>
        </div>
+               
+           <div class="sidebar" id="sidebar_list" style="display:none;">
+               <ul>
+                     <li><a href="">Home</a></li>
+                     <li><a href="">History</a></li>
+                     <li><a href="">Culture</a></li>
+                     <li><a href="">Explore</a></li>
+                     <li><a href="">About us</a></li>
+                 </ul>
+           </div>
                 <div class="scroll-container">
              <div class="scroll-header" id="bar"></div>
                     </div>
-         </div>       
+         </div> 
+        
         <div class="home_section"> 
                <div class="home-content">
                   <div class="title-home">
@@ -46,19 +62,7 @@
         </div>
         <div class="history-food">
               <div class="head-history">
-                  <span>H</span>
-                  <span>i</span>
-                  <span>s</span>
-                  <span>t</span>
-                  <span>o</span>
-                  <span>R</span>
-                  <span>Y  </span>
-                  <span>o</span>
-                  <span>f  </span>
-                  <span>F</span>
-                  <span>o</span>
-                  <span>O</span>
-                  <span>D</span>
+                 <span>History</span>
             </div>
             <div class="history-content">
                 <div class="img_container"> 
@@ -111,7 +115,7 @@
                 <div class="content1 con2">
                     <h1>FOOD  and  CULTURE</h1>
                     <p> Have you ever wondered what the food you eat everyday can tell you about where you come from? Have you ever wondered why people from different parts of the world eat different types of food? Do you ever ask yourself why certain foods or culinary traditions are so important to your culture? There is more of a connection between food and culture than you may think.</p>
-                   <p>On an individual level, we grow up eating the food of our cultures. It becomes a part of who each of us are. Many of us associate food from our childhood with warm feelings and good memories and it ties us to our families, holding a special and personal value for us. Food from our family often becomes the comfort food we seek as adults in times of frustration and stress. When I was sick as a kid, I couldn’t eat rice because I was too weak, so my mother would cook soup and bring it to bed for me. The smell and taste of the soup became something very familiar to me. Now, whenever I feel tired or stressed, I remember the soup my mom used to make for me and I feel hungry for that soup.</p>
+                  
                     <p>On a larger scale, food is an important part of culture. Traditional cuisine is passed down from one generation to the next. It also operates as an expression of cultural identity. Immigrants bring the food of their countries with them wherever they go and cooking traditional food is a way of preserving their culture when they move to new places.</p>
                 </div>
                 <div class="culture_img"> 
@@ -204,6 +208,23 @@
             var scrolled= (heightfromtop/height) * 100;
             document.getElementById("bar").style.width=scrolled+ "%";
            }
+        </script>
+        <script>
+           var x= document.getElementById("open-bar");
+           var y= document.getElementById("cross");
+            
+            x.addEventListener("click",opensidebar);
+            y.addEventListener("click",closesidebar);
+           function opensidebar(){
+                document.getElementById("sidebar_list").style.display="block";
+                document.getElementById("open-bar").style.display="none";
+                document.getElementById("cross").style.display="block";   
+            }
+              function closesidebar(){
+                  document.getElementById("sidebar_list").style.display="none";
+                  document.getElementById("open-bar").style.display="block";
+                document.getElementById("cross").style.display="none";   
+             }
         </script>
     </body>
 </html>
